@@ -24,8 +24,8 @@ jobs:
       - name: Setup Node.js & Hutch
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - run: npm install -g hutch
+          node-version: '24'
+      - run: curl -fsSL https://hutch.blackboard.sh/hutch/install.sh | sh
 
       - name: Patch build.ts for Baseline CPU
         working-directory: ./package
